@@ -17,12 +17,12 @@ wdw.addEventListener("mousedown", handleHam);
 const date = "1 Juni 2022";
 
 const selisih = Date.now() - Date.parse(date);
-const year = Math.floor(selisih / (1000 * 60 * 60 * 24 * 365));
+const year = Math.floor(selisih / (1000 * 60 * 60 * 24 * 365.25));
 const month = Math.floor(
-  (selisih % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
+  (selisih % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.417)
 );
 const day = Math.floor(
-  (selisih % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+  (selisih % (1000 * 60 * 60 * 24 * 30.417)) / (1000 * 60 * 60 * 24)
 );
 const umurPertamaNgoding =
   year + " tahun " + month + " bulan " + day + " hari";
