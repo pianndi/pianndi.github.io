@@ -14,7 +14,7 @@ ham.addEventListener("change", handleHam);
 wdw.addEventListener("touchstart", handleHam);
 wdw.addEventListener("mousedown", handleHam);
 
-const date = "1 Juni 2022";
+const date = document.getElementById("date").innerHTML;
 
 const selisih = Date.now() - Date.parse(date);
 const year = Math.floor(selisih / (1000 * 60 * 60 * 24 * 365.25));
@@ -25,7 +25,6 @@ const day = Math.floor(
   (selisih % (1000 * 60 * 60 * 24 * 30.417)) / (1000 * 60 * 60 * 24)
 );
 const umurPertamaNgoding =
-  `${year ? (year + " tahun "):""}${month ? (month + " bulan "):""}${day ? (day + " hari"):""}`;
-document.getElementById("date").innerHTML = date;
+  `${year ? (year + " tahun ") : ""}${month ? (month + " bulan ") : ""}${day ? (day + " hari") : ""}`;
 document.getElementById("umurPertamaNgoding").innerHTML =
   umurPertamaNgoding;
