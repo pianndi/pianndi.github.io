@@ -25,7 +25,7 @@ const day = Math.floor(
   (selisih % (1000 * 60 * 60 * 24 * 30.417)) / (1000 * 60 * 60 * 24)
 );
 const umurPertamaNgoding =
-  `${year>0 && (year + " tahun ")}${month >0&& (month + " bulan ")}${day >0&& (day + " hari")}`;
+  `${year ? (year + " tahun "):""}${month ? (month + " bulan "):""}${day ? (day + " hari"):""}`;
 document.getElementById("date").innerHTML = date;
 document.getElementById("umurPertamaNgoding").innerHTML =
   umurPertamaNgoding;
